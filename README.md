@@ -10,11 +10,10 @@ A modern, fully responsive personal portfolio website built to showcase my skill
 
 ## 📸 Preview
 
-pics/Somepics (1).png
-pics/Somepics (2).png
-pics/Somepics (3).png
-pics/Somepics (4).png
-
+![Home](pics/Somepics%20(1).png)
+![About](pics/Somepics%20(2).png)
+![Projects](pics/Somepics%20(3).png)
+![Contact](pics/Somepics%20(4).png)
 ---
 
 ## ✨ Features
