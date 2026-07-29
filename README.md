@@ -4,7 +4,7 @@ A modern, fully responsive personal portfolio website built to showcase my skill
 
 ## 🚀 Live Demo
 
-🔗 **Portfolio:** comming soon 
+🔗 **Portfolio:** https://anshul-portfolio-self.vercel.app/
 
 ---
 
@@ -76,7 +76,7 @@ This portfolio reflects my journey in programming and web development. It serves
 
 **Anshul Kumar**
 
-🌐 **Portfolio:** hosting soon 
+🌐 **Portfolio:** https://anshul-portfolio-self.vercel.app/
 
 💻 **GitHub:** https://github.com/anshulkr009
 
