@@ -303,8 +303,14 @@
   }
   .project-desc{color:var(--muted);font-size:0.95rem;}
   .project-stack{
-    margin-top:1.2rem;display:flex;gap:0.5rem;flex-wrap:wrap;
+    margin-top:0.9rem;display:flex;gap:0.5rem;flex-wrap:wrap;
   }
+  .inline-link{
+    color:var(--gold);
+    border-bottom:1px solid transparent;
+    transition:border-color 0.25s ease;
+  }
+  .inline-link:hover{border-color:var(--gold);}
   .project-stack span{
     font-family:'JetBrains Mono',monospace;
     font-size:0.68rem;letter-spacing:0.05em;
@@ -312,6 +318,7 @@
     border:1px solid var(--line);
     padding:0.28rem 0.6rem;border-radius:2px;
   }
+
   @media (prefers-reduced-motion: reduce){
     .flip-card-inner{transition:none;}
   }
@@ -329,6 +336,15 @@
   .experience-top{
     display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;
     margin-bottom:1.4rem;
+  }
+  .experience-brand{
+    display:flex;align-items:center;gap:1rem;
+  }
+  .vihaan-logo{
+    width:52px;height:52px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid var(--line);
   }
   .experience-role{
     font-family:'Poppins',sans-serif;
