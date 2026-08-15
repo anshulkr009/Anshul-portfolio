@@ -20,6 +20,7 @@
     <a href="#experience">Experience</a>
     <a href="#vihaan">Vihaan</a>
     <a href="#contact">Contact</a>
+    <a href="#chat">Chat</a>
   </div>
 </nav>
 
@@ -112,6 +113,7 @@
           <div class="project-stack">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
+          <a class="repo-link" href="https://github.com/anshulkr009/Anshul-portfolio.git" target="_blank" rel="noopener">View Code →</a>
         </div>
       </div>
     </div>
@@ -130,6 +132,27 @@
           <p class="project-desc">A simple rule-based chatbot that responds to basic greetings like "hey" and "hello", built to practice core Python logic and conditionals.</p>
           <div class="project-stack">
             <span>Python</span>
+          </div>
+          <a class="repo-link" href="https://github.com/anshulkr009/CodeAlpha-Basicchatbot.git" target="_blank" rel="noopener">View Code →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" tabindex="0">
+      <div class="flip-card-inner">
+        <div class="flip-face flip-front">
+          <div class="project-mark">03</div>
+          <div>
+            <div class="status-badge">In Progress</div>
+            <div class="project-title">Hangman Game</div>
+            <div class="flip-hint">Hover to view details</div>
+          </div>
+        </div>
+        <div class="flip-face flip-back">
+          <div class="project-title">Hangman Game</div>
+          <p class="project-desc">A simple text-based Hangman game where the player guesses a word one letter at a time — using a small list of 5 predefined words, a limit of 6 incorrect guesses, and basic console input/output.</p>
+          <div class="project-stack">
+            <span>Python</span><span>random</span><span>loops</span><span>if-else</span>
           </div>
         </div>
       </div>
@@ -221,6 +244,34 @@
     </div>
   </div>
 </section> 
+
+<section id="chat">
+  <div class="section-head">
+    <div class="eyebrow">Ask Me</div>
+    <h2 class="section-title">Got a question? Ask my bot.</h2>
+  </div>
+  <div class="chatbox-wrap">
+    <div class="chatbox">
+      <div class="chat-header">
+        <div class="chat-dot"></div>
+        <span>Anshul's Assistant</span>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot">Hey! I can answer quick questions about Anshul — his skills, projects, experience, or how to reach him. Try asking something below.</div>
+      </div>
+      <div class="chat-suggestions">
+        <button class="chip" data-q="What are your skills?">Skills</button>
+        <button class="chip" data-q="Tell me about your projects">Projects</button>
+        <button class="chip" data-q="What is your experience?">Experience</button>
+        <button class="chip" data-q="How can I contact you?">Contact</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Ask something about Anshul..." autocomplete="off" />
+        <button id="chatSend" class="btn solid chat-send-btn" aria-label="Send">Send</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div>© <span id="year"></span> Anshul Kumar</div>

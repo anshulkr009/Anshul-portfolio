@@ -59,3 +59,93 @@ document.getElementById('year').textContent = new Date().getFullYear();
   } else {
     tick();
   }
+
+  /* ---------- Chatbox: rule-based Q&A about Anshul ---------- */
+  const chatKB = [
+    {
+      keywords: ['hi','hello','hey','yo','sup'],
+      reply: "Hey there! I'm Anshul's little assistant. Ask me about his skills, projects, experience, education, or how to contact him."
+    },
+    {
+      keywords: ['skill','language','tech','stack','know'],
+      reply: "Anshul works with C, C++, Java, Python, HTML, and CSS — with a growing focus on AI &amp; ML."
+    },
+    {
+      keywords: ['project','portfolio','chatbot','build','made','work'],
+      reply: "He's built two projects so far — this <b>Personal Portfolio Website</b> and a <b>Basic Chatbot</b> in Python — and is currently working on a text-based <b>Hangman Game</b>. Check the Project section above for details."
+    },
+    {
+      keywords: ['hangman'],
+      reply: "The Hangman Game is a work in progress — a text-based console game where the player guesses a word one letter at a time, from a list of 5 predefined words, with up to 6 incorrect guesses allowed."
+    },
+    {
+      keywords: ['experience','intern','codealpha','job','worked'],
+      reply: "Anshul completed a 1-month Python Programming internship at <b>CodeAlpha</b>, where he built real-world Python projects and sharpened his problem-solving skills."
+    },
+    {
+      keywords: ['education','study','college','degree','course','university'],
+      reply: "He's currently pursuing a B.Tech in Computer Science Engineering, specializing in AI &amp; ML."
+    },
+    {
+      keywords: ['vihaan','venture','startup','freelance','business'],
+      reply: "Alongside his studies, Anshul is building <b>Vihaan</b> — a freelance web development studio helping individuals and small brands get fast, affordable websites. Find it on Instagram as @getvihaan."
+    },
+    {
+      keywords: ['resume','cv'],
+      reply: "You can grab his resume using the 'Download Resume' button at the top of the page."
+    },
+    {
+      keywords: ['contact','email','reach','linkedin','github','connect','social'],
+      reply: "Best ways to reach him: email at work.asnhul.in@gmail.com, or via GitHub/LinkedIn — all in the Contact section above."
+    },
+    {
+      keywords: ['name','who'],
+      reply: "This is Anshul Kumar's portfolio — a B.Tech CSE (AI &amp; ML) student."
+    },
+    {
+      keywords: ['thank','thanks','bye'],
+      reply: "You're welcome! Feel free to reach out to Anshul directly if you'd like to connect further."
+    },
+  ];
+
+  function getBotReply(message){
+    const msg = message.toLowerCase();
+    for(const entry of chatKB){
+      if(entry.keywords.some(k => msg.includes(k))){
+        return entry.reply;
+      }
+    }
+    return "I'm not sure about that one — but you can ask about Anshul's skills, projects, experience, education, or contact info. For anything else, reach him directly through the Contact section.";
+  }
+
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+
+  function appendMessage(text, sender){
+    const div = document.createElement('div');
+    div.className = `chat-msg ${sender}`;
+    div.innerHTML = text;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function handleSend(text){
+    const value = (text !== undefined ? text : chatInput.value).trim();
+    if(!value) return;
+    appendMessage(value.replace(/</g,'&lt;'), 'user');
+    chatInput.value = '';
+    setTimeout(() => {
+      appendMessage(getBotReply(value), 'bot');
+    }, 350);
+  }
+
+  if(chatSend && chatInput){
+    chatSend.addEventListener('click', () => handleSend());
+    chatInput.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter') handleSend();
+    });
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => handleSend(chip.dataset.q));
+    });
+  }
