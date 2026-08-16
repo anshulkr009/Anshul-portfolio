@@ -96,7 +96,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
     },
     {
       keywords: ['contact','email','reach','linkedin','github','connect','social'],
-      reply: "Best ways to reach him: email at work.asnhul.in@gmail.com, or via GitHub/LinkedIn — all in the Contact section above."
+      reply: "Best ways to reach him: email at work.anshul.in@gmail.com, or via GitHub/LinkedIn — all in the Contact section above."
     },
     {
       keywords: ['name','who'],
