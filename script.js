@@ -72,11 +72,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
     },
     {
       keywords: ['project','portfolio','chatbot','build','made','work'],
-      reply: "He's built two projects so far — this <b>Personal Portfolio Website</b> and a <b>Basic Chatbot</b> in Python — and is currently working on a text-based <b>Hangman Game</b>. Check the Project section above for details."
+      reply: "He's built four projects so far — this <b>Personal Portfolio Website</b>, a <b>Basic Chatbot</b>, a text-based <b>Hangman Game</b>, and a <b>Stock Portfolio Tracker</b>, all in Python. Check the Project section above for details."
     },
     {
       keywords: ['hangman'],
-      reply: "The Hangman Game is a work in progress — a text-based console game where the player guesses a word one letter at a time, from a list of 5 predefined words, with up to 6 incorrect guesses allowed."
+      reply: "The Hangman Game is a text-based console game where the player guesses a word one letter at a time, from a list of 5 predefined words, with up to 6 incorrect guesses allowed. Built using random word selection, loops, and conditionals."
+    },
+    {
+      keywords: ['stock','portfolio tracker','tracker','investment'],
+      reply: "The Stock Portfolio Tracker is a command-line Python tool that takes stock names and quantities as input, calculates total investment value using predefined prices, and exports a summary to a .txt or .csv file — built using dictionaries and file handling."
     },
     {
       keywords: ['experience','intern','codealpha','job','worked'],
